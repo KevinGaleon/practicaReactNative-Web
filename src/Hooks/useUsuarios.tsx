@@ -1,10 +1,10 @@
 import React, { useRef, useState } from 'react';
 import { useEffect } from 'react';
 import { reqResApi } from '../api/reqRes';
-import { ReqResListado } from '../interfaces/reqRes';
+import { ReqResListado, Usuario } from '../interfaces/reqRes';
 
 export const useUsuarios = () => {
-    const [usuarios, setUsuarios] = useState([]);
+    const [usuarios, setUsuarios] = useState<Usuario[]>([]);
     const paginaRef = useRef(1);
 
     useEffect(() => {
